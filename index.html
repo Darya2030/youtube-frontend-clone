@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive YouTube-inspired frontend built with HTML, CSS and vanilla JavaScript.">
+  <title>YouTube — Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/video.css">
+</head>
+<body>
+  <header class="header">
+    <div class="left-section">
+      <button class="icon-button menu-button" id="menuButton" aria-label="Toggle menu"><img src="assets/icons/hamburger-menu.svg" alt=""></button>
+      <a class="youtube-logo" href="index.html" aria-label="YouTube home"><img src="assets/icons/youtube-logo.svg" alt="YouTube"></a>
+    </div>
+    <form class="middle-section search-form" action="search.html" method="get">
+      <input class="search-bar" type="search" name="q" placeholder="Search" aria-label="Search">
+      <button class="search-button" type="submit" aria-label="Search"><img src="assets/icons/search.svg" alt=""></button>
+      <button class="voice-search-button" type="button" aria-label="Search with your voice" title="Search with your voice">🎙</button>
+    </form>
+    <div class="right-section">
+      <button class="create-button" type="button" title="Create"><span>＋</span> Create</button>
+      <button class="icon-button apps-button" type="button" aria-label="YouTube apps"><img src="assets/icons/youtube-apps.svg" alt=""></button>
+      <button class="icon-button notification-button" type="button" aria-label="Notifications"><img src="assets/icons/notifications.svg" alt=""><span class="notification-count">3</span></button>
+      <button class="profile-button" type="button" aria-label="Your account"><img src="assets/channels/daryalens-profile.png" alt="Profile"></button>
+      <button class="icon-button theme-button" id="themeButton" type="button" aria-label="Switch theme" title="Switch theme">☾</button>
+    </div>
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+    <a class="sidebar-link active" href="index.html"><img src="assets/icons/home.svg" alt=""><span>Home</span></a>
+    <a class="sidebar-link" href="shorts.html"><span class="nav-symbol">▶</span><span>Shorts</span></a>
+    <a class="sidebar-link" href="subscriptions.html"><img src="assets/icons/subscriptions.svg" alt=""><span>Subscriptions</span></a>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-heading">You <span>›</span></div>
+    <a class="sidebar-link" href="library.html"><img src="assets/icons/library.svg" alt=""><span>Library</span></a>
+    <a class="sidebar-link" href="library.html#history"><span class="nav-symbol">◷</span><span>History</span></a>
+    <a class="sidebar-link" href="library.html#playlists"><span class="nav-symbol">▤</span><span>Playlists</span></a>
+    <a class="sidebar-link" href="library.html#liked"><span class="nav-symbol">♡</span><span>Liked videos</span></a>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-heading">Explore</div>
+    <a class="sidebar-link" href="search.html?q=trending"><img src="assets/icons/explore.svg" alt=""><span>Trending</span></a>
+    <a class="sidebar-link" href="search.html?q=music"><img src="assets/icons/youtube-music.svg" alt=""><span>Music</span></a>
+    <a class="sidebar-link" href="search.html?q=originals"><img src="assets/icons/originals.svg" alt=""><span>Originals</span></a>
+  </aside>
+
+  <main class="page-content">
+    <nav class="category-bar" aria-label="Video categories">
+      <button class="category-chip selected" data-category="all">All</button>
+      <button class="category-chip" data-category="music">Music</button>
+      <button class="category-chip" data-category="gaming">Gaming</button>
+      <button class="category-chip" data-category="technology">Technology</button>
+      <button class="category-chip" data-category="comedy">Comedy</button>
+      <button class="category-chip" data-category="education">Education</button>
+      <button class="category-chip" data-category="travel">Travel</button>
+      <button class="category-chip" data-category="fitness">Fitness</button>
+      <button class="category-chip" data-category="food">Food</button>
+      <button class="category-chip" data-category="recent">Recently uploaded</button>
+    </nav>
+
+    <section class="video-grid" aria-label="Recommended videos">
+      <article class="video-preview" data-category="technology">
+        <a class="thumbnail-row" href="watch.html?video=1"><img class="thumbnail" src="assets/thumbnails/thumbnail-1.webp" alt="Talking tech and AI"><span class="video-time">14:20</span></a>
+        <div class="video-info-grid"><a class="channel-picture" href="watch.html?video=1"><img class="profile-picture" src="assets/channels/channel-1.jpeg" alt="Marques Brownlee"></a><div class="video-info"><a class="video-title-link" href="watch.html?video=1"><h2 class="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</h2></a><p class="video-author">Marques Brownlee <span class="verified">✓</span></p><p class="video-stats">3.4M views · 6 months ago</p></div><button class="more-button" aria-label="More options">⋮</button></div>
+      </article>
+      <article class="video-preview" data-category="comedy">
+        <a class="thumbnail-row" href="watch.html?video=2"><img class="thumbnail" src="assets/thumbnails/thumbnail-2.webp" alt="Try not to laugh challenge"><span class="video-time">8:22</span></a>
+        <div class="video-info-grid"><a class="channel-picture" href="watch.html?video=2"><img class="profile-picture" src="assets/channels/channel-2.jpeg" alt="Markiplier"></a><div class="video-info"><a class="video-title-link" href="watch.html?video=2"><h2 class="video-title">Try Not To Laugh Challenge #9</h2></a><p class="video-author">Markiplier <span class="verified">✓</span></p><p class="video-stats">19M views · 4 years ago</p></div><button class="more-button" aria-label="More options">⋮</button></div>
+      </article>
+      <article class="video-preview" data-category="comedy">
+        <a class="thumbnail-row" href="watch.html?video=3"><img class="thumbnail" src="assets/thumbnails/thumbnail-3.webp" alt="Funny TikTok moments"><span class="video-time">9:13</span></a>
+        <div class="video-info-grid"><a class="channel-picture" href="watch.html?video=3"><img class="profile-picture" src="assets/channels/channel-3.jpeg" alt="SSSniperWolf"></a><div class="video-info"><a class="video-title-link" href="watch.html?video=3"><h2 class="video-title">Crazy TikToks Taken Moments Before DISASTER</h2></a><p class="video-author">SSSniperWolf <span class="verified">✓</span></p><p class="video-stats">12M views · 1 year ago</p></div><button class="more-button" aria-label="More options">⋮</button></div>
+      </article>
+      <article class="video-preview" data-category="education">
+        <a class="thumbnail-row" href="watch.html?video=4"><img class="thumbnail" src="assets/thumbnails/thumbnail-4.webp" alt="Collatz conjecture"><span class="video-time">22:09</span></a>
+        <div class="video-info-grid"><a class="channel-picture" href="watch.html?video=4"><img class="profile-picture" src="assets/channels/channel-4.jpeg" alt="Veritasium"></a><div class="video-info"><a class="video-title-link" href="watch.html?video=4"><h2 class="video-title">The Simplest Math Problem No One Can Solve — Collatz Conjecture</h2></a><p class="video-author">Veritasium <span class="verified">✓</span></p><p class="video-stats">18M views · 4 months ago</p></div><button class="more-button" aria-label="More options">⋮</button></div>
+      </article>
+      <article class="video-preview" data-category="education">
+        <a class="thumbnail-row" href="watch.html?video=5"><img class="thumbnail" src="assets/thumbnails/thumbnail-5.webp" alt="Kadane's algorithm"><span class="video-time">11:17</span></a>
+        <div class="video-info-grid"><a class="channel-picture" href="watch.html?video=5"><img class="profile-picture" src="assets/channels/channel-5.jpeg" alt="CS Dojo"></a><div class="video-info"><a class="video-title-link" href="watch.html?video=5"><h2 class="video-title">Kadane's Algorithm to Maximum Sum Subarray Problem</h2></a><p class="video-author">CS Dojo</p><p class="video-stats">519K views · 5 years ago</p></div><button class="more-button" aria-label="More options">⋮</button></div>
+      </article>
+      <article class="video-preview" data-category="gaming">
+        <a class="thumbnail-row" href="watch.html?video=6"><img class="thumbnail" src="assets/thumbnails/thumbnail-6.webp" alt="MrBeast challenge"><span class="video-time">19:59</span></a>
+        <div class="video-info-grid"><a class="channel-picture" href="watch.html?video=6"><img class="profile-picture" src="assets/channels/channel-6.jpeg" alt="MrBeast"></a><div class="video-info"><a class="video-title-link" href="watch.html?video=6"><h2 class="video-title">Try Anything You Can Fit In The Circle, I'll Pay For</h2></a><p class="video-author">MrBeast <span class="verified">✓</span></p><p class="video-stats">141M views · 1 year ago</p></div><button class="more-button" aria-label="More options">⋮</button></div>
+      </article>
+      <article class="video-preview" data-category="travel">
+        <a class="thumbnail-row" href="watch.html?video=7"><img class="thumbnail" src="assets/thumbnails/thumbnail-7.webp" alt="Why planes don't fly over Tibet"><span class="video-time">10:13</span></a>
+        <div class="video-info-grid"><a class="channel-picture" href="watch.html?video=7"><img class="profile-picture" src="assets/channels/channel-7.jpeg" alt="RealLifeLore"></a><div class="video-info"><a class="video-title-link" href="watch.html?video=7"><h2 class="video-title">Why Planes Don't Fly Over Tibet</h2></a><p class="video-author">RealLifeLore <span class="verified">✓</span></p><p class="video-stats">6.6M views · 1 year ago</p></div><button class="more-button" aria-label="More options">⋮</button></div>
+      </article>
+      <article class="video-preview" data-category="technology">
+        <a class="thumbnail-row" href="watch.html?video=8"><img class="thumbnail" src="assets/thumbnails/thumbnail-8.webp" alt="Inside the world's biggest passenger plane"><span class="video-time">7:12</span></a>
+        <div class="video-info-grid"><a class="channel-picture" href="watch.html?video=8"><img class="profile-picture" src="assets/channels/channel-8.jpeg" alt="Tech Vision"></a><div class="video-info"><a class="video-title-link" href="watch.html?video=8"><h2 class="video-title">Inside The World's Biggest Passenger Plane</h2></a><p class="video-author">Tech Vision</p><p class="video-stats">3.7M views · 10 months ago</p></div><button class="more-button" aria-label="More options">⋮</button></div>
+      </article>
+      <article class="video-preview" data-category="fitness">
+        <a class="thumbnail-row" href="watch.html?video=9"><img class="thumbnail" src="assets/thumbnails/thumbnail-9.webp" alt="Superhuman strength"><span class="video-time">13:17</span></a>
+        <div class="video-info-grid"><a class="channel-picture" href="watch.html?video=9"><img class="profile-picture" src="assets/channels/channel-9.jpeg" alt="ThenX"></a><div class="video-info"><a class="video-title-link" href="watch.html?video=9"><h2 class="video-title">The SECRET to Super Human STRENGTH</h2></a><p class="video-author">ThenX <span class="verified">✓</span></p><p class="video-stats">20M views · 3 years ago</p></div><button class="more-button" aria-label="More options">⋮</button></div>
+      </article>
+      <article class="video-preview" data-category="food">
+        <a class="thumbnail-row" href="watch.html?video=10"><img class="thumbnail" src="assets/thumbnails/thumbnail-10.webp" alt="Largest cruise ship kitchen"><span class="video-time">7:53</span></a>
+        <div class="video-info-grid"><a class="channel-picture" href="watch.html?video=10"><img class="profile-picture" src="assets/channels/channel-10.jpeg" alt="Business Insider"></a><div class="video-info"><a class="video-title-link" href="watch.html?video=10"><h2 class="video-title">How The World's Largest Cruise Ship Makes 30,000 Meals Every...</h2></a><p class="video-author">Business Insider <span class="verified">✓</span></p><p class="video-stats">14M views · 1 year ago</p></div><button class="more-button" aria-label="More options">⋮</button></div>
+      </article>
+      <article class="video-preview" data-category="travel">
+        <a class="thumbnail-row" href="watch.html?video=11"><img class="thumbnail" src="assets/thumbnails/thumbnail-11.webp" alt="Dubai underwater train"><span class="video-time">4:10</span></a>
+        <div class="video-info-grid"><a class="channel-picture" href="watch.html?video=11"><img class="profile-picture" src="assets/channels/channel-11.jpeg" alt="Destination Tips"></a><div class="video-info"><a class="video-title-link" href="watch.html?video=11"><h2 class="video-title">Dubai's Crazy Underwater Train and Other Things</h2></a><p class="video-author">Destination Tips</p><p class="video-stats">3M views · 1 year ago</p></div><button class="more-button" aria-label="More options">⋮</button></div>
+      </article>
+      <article class="video-preview" data-category="education">
+        <a class="thumbnail-row" href="watch.html?video=12"><img class="thumbnail" src="assets/thumbnails/thumbnail-12.webp" alt="What happens if you don't drink water"><span class="video-time">4:51</span></a>
+        <div class="video-info-grid"><a class="channel-picture" href="watch.html?video=12"><img class="profile-picture" src="assets/channels/channel-12.jpeg" alt="TED-Ed"></a><div class="video-info"><a class="video-title-link" href="watch.html?video=12"><h2 class="video-title">What Would Happen If You Didn't Drink Water?</h2></a><p class="video-author">TED-Ed <span class="verified">✓</span></p><p class="video-stats">12M views · 5 years ago</p></div><button class="more-button" aria-label="More options">⋮</button></div>
+      </article>
+    </section>
+    <p class="no-results" id="noResults" hidden>No videos in this category yet.</p>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>

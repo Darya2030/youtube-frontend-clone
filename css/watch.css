@@ -1,0 +1,141 @@
+.watch-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 24px;
+  max-width: 1600px;
+  margin: 24px auto 60px;
+  padding: 0 32px 0 272px;
+}
+
+.watch-main { min-width: 0; }
+
+.player-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+  aspect-ratio: 16 / 9;
+}
+
+.player-frame > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .84;
+}
+
+.player-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 68px;
+  height: 48px;
+  transform: translate(-50%, -50%);
+  border: 0;
+  border-radius: 12px;
+  background: #f00;
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.player-message {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  text-shadow: 0 1px 4px #000;
+}
+
+.watch-main h1 {
+  margin: 14px 0 12px;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.watch-channel-row,
+.channel-details,
+.watch-actions {
+  display: flex;
+  align-items: center;
+}
+
+.watch-channel-row {
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.channel-details { gap: 12px; }
+.channel-details img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
+.channel-details div { display: flex; flex-direction: column; gap: 4px; }
+.channel-details strong { font-size: 14px; }
+.channel-details span { color: var(--secondary-text); font-size: 12px; }
+
+.subscribe-button {
+  margin-left: 12px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 22px;
+  background: var(--text);
+  color: var(--page-background);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.watch-actions { gap: 8px; }
+.watch-actions button {
+  padding: 9px 12px;
+  border: 0;
+  border-radius: 20px;
+  background: var(--chip);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.description-box {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--chip);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.description-box p { margin: 8px 0 0; }
+.comments { margin-top: 28px; }
+.comments h2 { font-size: 20px; }
+.comments h2 span { color: var(--secondary-text); font-size: 14px; font-weight: 400; }
+.comment-input { display: flex; gap: 12px; align-items: center; margin: 22px 0; }
+.comment-input img { width: 36px; height: 36px; border-radius: 50%; }
+.comment-input input { flex: 1; padding: 8px 0; border: 0; border-bottom: 1px solid var(--border); outline: 0; background: transparent; color: var(--text); }
+.comment { display: flex; gap: 12px; margin: 24px 0; font-size: 13px; }
+.comment-avatar { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; background: #547a9d; color: white; }
+.comment strong span, .comment small { color: var(--secondary-text); font-weight: 400; }
+.comment p { margin: 8px 0; }
+
+.up-next h2 { margin: 0 0 14px; font-size: 18px; }
+.suggested-video { display: flex; gap: 10px; margin-bottom: 14px; }
+.suggested-video img { width: 168px; height: 94px; border-radius: 8px; object-fit: cover; }
+.suggested-video span { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.suggested-video strong { font-size: 13px; line-height: 18px; }
+.suggested-video small { color: var(--secondary-text); font-size: 11px; }
+
+@media (max-width: 1100px) {
+  .watch-layout { grid-template-columns: minmax(0, 1fr); padding: 0 24px 0 96px; }
+  .up-next { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .up-next h2 { grid-column: 1 / -1; }
+}
+
+@media (max-width: 650px) {
+  .watch-layout { margin-top: 0; padding: 0 0 32px; }
+  .player-frame { border-radius: 0; }
+  .watch-main h1, .watch-channel-row, .description-box, .comments, .up-next { margin-left: 12px; margin-right: 12px; }
+  .watch-main h1 { font-size: 18px; }
+  .watch-channel-row { align-items: flex-start; flex-direction: column; }
+  .watch-actions { flex-wrap: wrap; }
+  .up-next { display: block; }
+  .suggested-video img { width: 42%; height: auto; aspect-ratio: 16 / 9; }
+}
